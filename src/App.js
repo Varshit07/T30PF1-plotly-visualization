@@ -13,7 +13,6 @@ import {
 class App extends React.Component {
   fetchData = (evt) => {
     evt.preventDefault();
-    //console.log('1' + this.props.data.list);
     var location = encodeURIComponent(this.props.location);
 
     var urlPrefix = 'http://api.openweathermap.org/data/2.5/forecast?q=';
@@ -21,11 +20,9 @@ class App extends React.Component {
     var url = urlPrefix + location + urlSuffix;
 
     this.props.dispatch(fetchData(url));
-    //console.log('2' + this.props.data.list);
   };
 
   onPlotClick = (data) => {
-    //console.log("Hello, World!");
     if (data.points) {
       var number = data.points[0].pointNumber;
       this.props.dispatch(setSelectedDate(this.props.dates[number]));

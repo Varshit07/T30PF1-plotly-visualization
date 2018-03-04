@@ -55,31 +55,6 @@ export function setTempsk(tempsk) {
     tempsk: tempsk
   };
 };
-/*
-export function changeMetric(tempMetric,temps) {
-	console.log("changeMetric invoked in actions");
-	console.log("initial" + temps + "end");
-	if(tempMetric === 'Celsius'){
-		console.log("t = c");
-		for(var i = 0 ; i < 40 ; i++) {
-			temps[i] = 1.8*temps[i] + 32;
-		}
-		console.log(temps);
-		return {
-			type: 'SET_TEMPS',
-			temps: temps
-		}
-	}
-	else {
-		console.log('else');
-		console.log(temps);
-			return {
-				type: 'SET_TEMPS',
-				temps: temps
-			}
-	}
-}
-*/
 
 export function fetchData(url) {
   return function thunk(dispatch) {
