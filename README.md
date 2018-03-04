@@ -1,7 +1,7 @@
-T30PF1 Contributors:-
-1)Aparna Mohan
-2)varshaa raman
-3)Varshit Shah
+T30PF1 Contributors:-<br />
+1)Aparna Mohan<br />
+2)varshaa raman<br />
+3)Varshit Shah<br />
 
 This web-app creates a graph of Date vs Temperatures. The web-app uses OpenWeatherMap's API to fetch the data and plot.ly library to plot the graphs.
 
