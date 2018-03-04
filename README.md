@@ -1,5 +1,7 @@
 This web-app creates a graph of Date vs Temperatures. The web-app uses OpenWeatherMap's API to fetch the data and plot.ly library to plot the graphs.
 
+First check if you have node.js version installed on your machine by executing [node -v] from the terminal.
+
 To run the app locally, clone the repository and execute [npm install] from the terminal to install all the required packages to run the app.  
 Then execute [npm start]. This will launch the app locally in your browser.
 
