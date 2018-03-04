@@ -3,13 +3,13 @@ T30PF1 Contributors:-<br />
 2)varshaa raman<br />
 3)Varshit Shah<br />
 
-This web-app creates a graph of Date vs Temperatures. The web-app uses OpenWeatherMap's API to fetch the data and plot.ly library to plot the graphs.
+This web-app creates a graph of Date vs Temperatures. The web-app uses OpenWeatherMap's API to fetch the data and plot.ly library to plot the graphs. A good tutorial on using <a href="https://plot.ly/">plot.ly</a> with ReactJS is available on https://academy.plot.ly/ .
 
 <h2>Pre-requisites</h2>
-First check if you have node.js version installed on your machine by executing [node -v] from the terminal. If your machine does not have node.js installed then install it from https://nodejs.org/en/download/ .
+First check if you have node.js version installed on your machine by executing `node -v` from the terminal. If your machine does not have node.js installed then install it from https://nodejs.org/en/download/ .
 <h2>Quickstart</h2>
-To run the app locally, clone the repository and execute [npm install] from the terminal to install all the required packages to run the app.  
-Then execute [npm start]. This will launch the app locally in your browser.
+To run the app locally, clone the repository and execute `npm install` from the terminal to install all the required packages to run the app.  
+Then execute `npm start`. This will launch the app locally in your browser.
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
