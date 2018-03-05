@@ -63,7 +63,6 @@ export function fetchData(url) {
     }, function (err, data) {
 
       var body = JSON.parse(data.body);
-			//console.log(body);
       var list = body.list;
       var dates = [];
       var temps = [];

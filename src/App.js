@@ -10,6 +10,9 @@ import {
 } from './actions';
 
 class App extends React.Component {
+  toTitleCase = (str) => {
+      return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+  }
   fetchData = (evt) => {
     evt.preventDefault();
     var location = encodeURIComponent(this.props.location);
@@ -110,6 +113,9 @@ class App extends React.Component {
 								{(this.Metric.value === "Celsius")?(
 									<div>
 										<p className="weather-text">Current Temperature at {this.props.data.city.name}, {this.props.data.city.country}: <span className = "highlight">{currentTemp.toPrecision(4)}°C</span></p>
+                    <div className="currentWeatherDescription">
+                      {this.toTitleCase(this.props.data.list[0].weather[0].description)}  <img src= {"https://openweathermap.org/img/w/" + this.props.data.list[0].weather[0].icon + ".png"} height = "60px" width = "60px" alt = "weather-description-illustration"/>
+                    </div>
 										<h2 className="weather-text">Forecast for {this.props.data.city.name}, {this.props.data.city.country}</h2>
 									   <Plot
 										 xData={this.props.dates}
@@ -122,7 +128,10 @@ class App extends React.Component {
 								{(this.Metric.value === "Fahrenheit")?(
 									<div>
 										<p className="weather-text">Current Temperature of {this.props.data.city.name}, {this.props.data.city.country}: <span className = "highlight">{(currentTemp * 1.8 + 32).toPrecision(4)}°F</span></p>
-										<h2 className="weather-text">Forecast for {this.props.data.city.name}, {this.props.data.city.country}</h2>
+                    <div className="currentWeatherDescription">
+                      {this.toTitleCase(this.props.data.list[0].weather[0].description)}  <img src= {"https://openweathermap.org/img/w/" + this.props.data.list[0].weather[0].icon + ".png"} height = "60px" width = "60px" alt = "weather-description-illustration"/>
+                    </div>
+                    <h2 className="weather-text">Forecast for {this.props.data.city.name}, {this.props.data.city.country}</h2>
 									   <Plot
 										 xData={this.props.dates}
 										 yData={this.props.tempsf}
@@ -133,7 +142,10 @@ class App extends React.Component {
 								{(this.Metric.value === "Kelvin")?(
 									<div>
 										<p className="weather-text">Current Temperature of {this.props.data.city.name}, {this.props.data.city.country}: <span className = "highlight">{(currentTemp + 273.15).toPrecision(5)}K</span></p>
-										<h2 className="weather-text">Forecast for {this.props.data.city.name}, {this.props.data.city.country}</h2>
+                    <div className="currentWeatherDescription">
+                      {this.toTitleCase(this.props.data.list[0].weather[0].description)}  <img src= {"https://openweathermap.org/img/w/" + this.props.data.list[0].weather[0].icon + ".png"} height = "60px" width = "60px" alt = "weather-description-illustration"/>
+                    </div>
+                    <h2 className="weather-text">Forecast for {this.props.data.city.name}, {this.props.data.city.country}</h2>
 									   <Plot
 										 xData={this.props.dates}
 										 yData={this.props.tempsk}
