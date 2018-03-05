@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import { connect } from 'react-redux';
-
 import Plot from './Plot';
 import {
   changeLocation,
@@ -15,7 +14,7 @@ class App extends React.Component {
     evt.preventDefault();
     var location = encodeURIComponent(this.props.location);
 
-    var urlPrefix = 'http://api.openweathermap.org/data/2.5/forecast?q=';
+    var urlPrefix = 'https://api.openweathermap.org/data/2.5/forecast?q=';
     var urlSuffix = '&APPID=d231efc52bef00d653e1d966b0840736&units=metric';
     var url = urlPrefix + location + urlSuffix;
 
@@ -110,8 +109,8 @@ class App extends React.Component {
 							<div>
 								{(this.Metric.value === "Celsius")?(
 									<div>
-										<p className="weather-text">Current Temperature of {this.props.location}: <span className = "highlight">{currentTemp.toPrecision(4)}°C</span></p>
-										<h2 className="weather-text">Forecast for {this.props.location}</h2>
+										<p className="weather-text">Current Temperature at {this.props.data.city.name}, {this.props.data.city.country}: <span className = "highlight">{currentTemp.toPrecision(4)}°C</span></p>
+										<h2 className="weather-text">Forecast for {this.props.data.city.name}, {this.props.data.city.country}</h2>
 									   <Plot
 										 xData={this.props.dates}
 										 yData={this.props.temps}
@@ -122,8 +121,8 @@ class App extends React.Component {
 									:null}
 								{(this.Metric.value === "Fahrenheit")?(
 									<div>
-										<p className="weather-text">Current Temperature of {this.props.location}: <span className = "highlight">{(currentTemp * 1.8 + 32).toPrecision(4)}°F</span></p>
-										<h2 className="weather-text">Forecast for {this.props.location}</h2>
+										<p className="weather-text">Current Temperature of {this.props.data.city.name}, {this.props.data.city.country}: <span className = "highlight">{(currentTemp * 1.8 + 32).toPrecision(4)}°F</span></p>
+										<h2 className="weather-text">Forecast for {this.props.data.city.name}, {this.props.data.city.country}</h2>
 									   <Plot
 										 xData={this.props.dates}
 										 yData={this.props.tempsf}
@@ -133,8 +132,8 @@ class App extends React.Component {
 									</div>):null}
 								{(this.Metric.value === "Kelvin")?(
 									<div>
-										<p className="weather-text">Current Temperature of {this.props.location}: <span className = "highlight">{(currentTemp + 273.15).toPrecision(5)}K</span></p>
-										<h2 className="weather-text">Forecast for {this.props.location}</h2>
+										<p className="weather-text">Current Temperature of {this.props.data.city.name}, {this.props.data.city.country}: <span className = "highlight">{(currentTemp + 273.15).toPrecision(5)}K</span></p>
+										<h2 className="weather-text">Forecast for {this.props.data.city.name}, {this.props.data.city.country}</h2>
 									   <Plot
 										 xData={this.props.dates}
 										 yData={this.props.tempsk}

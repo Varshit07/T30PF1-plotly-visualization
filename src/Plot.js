@@ -4,7 +4,6 @@ import React from 'react';
 
 class Plot extends React.Component {
   drawPlot = () => {
-    console.log('new plot');
     Plotly.newPlot('plot', [{
       x: this.props.xData,
       y: this.props.yData,
