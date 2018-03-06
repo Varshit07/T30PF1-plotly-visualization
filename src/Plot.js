@@ -16,7 +16,7 @@ class Plot extends React.Component {
         gridcolor: 'transparent'
       }
     }, {
-      displayModeBar: false
+      displayModeBar: true
     });
     document.getElementById('plot').on('plotly_click', this.props.onPlotClick);
   }
