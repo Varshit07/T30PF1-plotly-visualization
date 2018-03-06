@@ -21,7 +21,9 @@ class App extends React.Component {
     var location = encodeURIComponent(this.props.location);
 
     var urlPrefix = 'https://api.openweathermap.org/data/2.5/forecast?q=';
-    {/*Replace my OpenWeatherMap API Key with yours below below*/}
+    /*Replace my OpenWeatherMap API Key with yours below.
+      The below line should be
+      var urlSuffix = '&APPID=<Your-API-Key-here>@units=metric' */
     var urlSuffix = '&APPID=d231efc52bef00d653e1d966b0840736&units=metric';
     var url = urlPrefix + location + urlSuffix;
 
