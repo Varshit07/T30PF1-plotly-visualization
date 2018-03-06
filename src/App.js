@@ -51,7 +51,7 @@ class App extends React.Component {
     return (
       <div>
         <h1>Weather Forecast</h1>
-        <h2>Using OpenWeatherMap API and Plotly Library</h2>
+        <h2>Using <a href = "https://openweathermap.org/api" target="_blank" rel="noopener noreferrer">OpenWeatherMap API</a> and <a href="https://plot.ly/" target="_blank" rel="noopener noreferrer">Plotly Library</a></h2>
         <form onSubmit={this.fetchData}>
           <label>Show me the weather of
             <input
