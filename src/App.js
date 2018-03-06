@@ -87,6 +87,8 @@ class App extends React.Component {
 									   <Plot
 										 xData={this.props.dates}
 										 yData={this.props.temps}
+                     location = {this.props.data.city.name + ", " + this.props.data.city.country}
+                     tempMetric="°C"
 										 onPlotClick={this.onPlotClick}
 										 type="scatter"
 									   />
@@ -99,6 +101,8 @@ class App extends React.Component {
 									   <Plot
 										 xData={this.props.dates}
 										 yData={this.props.tempsf}
+                     location = {this.props.data.city.name + ", " + this.props.data.city.country}
+                     tempMetric="°F"
 										 onPlotClick={this.onPlotClick}
 										 type="scatter"
 									   />
@@ -110,6 +114,8 @@ class App extends React.Component {
 									   <Plot
 										 xData={this.props.dates}
 										 yData={this.props.tempsk}
+                     location = {this.props.data.city.name + ", " + this.props.data.city.country}
+                     tempMetric="K"
 										 onPlotClick={this.onPlotClick}
 										 type="scatter"
 									   />
@@ -127,6 +133,8 @@ class App extends React.Component {
 									   <Plot
 										 xData={this.props.dates}
 										 yData={this.props.temps}
+                     location = {this.props.data.city.name + ", " + this.props.data.city.country}
+                     tempMetric="°C"
 										 onPlotClick={this.onPlotClick}
 										 type="scatter"
 									   />
@@ -142,6 +150,8 @@ class App extends React.Component {
 									   <Plot
 										 xData={this.props.dates}
 										 yData={this.props.tempsf}
+                     location = {this.props.data.city.name + ", " + this.props.data.city.country}
+                     tempMetric="°F"
 										 onPlotClick={this.onPlotClick}
 										 type="scatter"
 									   />
@@ -156,6 +166,8 @@ class App extends React.Component {
 									   <Plot
 										 xData={this.props.dates}
 										 yData={this.props.tempsk}
+                     location = {this.props.data.city.name + ", " + this.props.data.city.country}
+                     tempMetric="K"
 										 onPlotClick={this.onPlotClick}
 										 type="scatter"
 									   />
@@ -164,6 +176,7 @@ class App extends React.Component {
                    )}
                  </div>
                ) : null}
+               <br />
       </div>
     );
   }
