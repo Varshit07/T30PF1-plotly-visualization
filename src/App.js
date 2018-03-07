@@ -26,7 +26,6 @@ class App extends React.Component {
       var urlSuffix = '&APPID=<Your-API-Key-here>@units=metric' */
     var urlSuffix = '&APPID=d231efc52bef00d653e1d966b0840736&units=metric';
     var url = urlPrefix + location + urlSuffix;
-
     this.props.dispatch(fetchData(url));
   };
 
@@ -57,7 +56,6 @@ class App extends React.Component {
             <input
               type="text"
 			        ref={(input) => { this.city = input; }}
-              value={this.props.location}
               onChange={this.changeLocation}
 			  required
             />

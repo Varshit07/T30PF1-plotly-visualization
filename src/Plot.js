@@ -15,7 +15,7 @@ class Plot extends React.Component {
         title: 'Showing forecast for ' + this.props.location,
         displayModeBar: true,
         margin: {
-          b: 100,
+          b: 100,r: 25
         },
         xaxis: {
           title:'Date and Time in UTC',
