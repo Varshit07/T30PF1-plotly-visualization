@@ -175,6 +175,7 @@ class App extends React.Component {
                  </div>
                ) : null}
                <br />
+               <br />
       </div>
     );
   }
